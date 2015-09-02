@@ -80,23 +80,7 @@ namespace Exercice5
             this.sphereCollision = new BoundingSphere(new Vector3(position.X, position.Y, 0), offset.X);
         }
 
-        public void MoveAsteroid(float moveX, float moveY)
-        {
-            Vector2 tempPos = new Vector2(this.position.X += moveX, this.position.Y += moveY);
-            Vector2 tempCenter = tempPos + offset;
-            sphereCollision.Center.X = tempCenter.X;
-            sphereCollision.Center.Y = tempCenter.Y;
 
-            this.position.X = tempPos.X;
-            this.position.Y = tempPos.Y;
-            posCenter = position + offset;
-            boiteCollision.Min.X = position.X;
-            boiteCollision.Min.Y = position.Y;
-            boiteCollision.Max.X = position.X + image.Width;
-            boiteCollision.Max.Y = position.Y + image.Height;
-            sphereCollision.Center.X = posCenter.X;
-            sphereCollision.Center.Y = posCenter.Y;
-        }   
      
 
     }

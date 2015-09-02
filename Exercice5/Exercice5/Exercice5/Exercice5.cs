@@ -18,14 +18,21 @@ namespace Exercice5
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
         public const int SCREENWIDTH = 1280;
         public const int SCREENHEIGHT = 796;
-        float asteroidSpeed = 5;
+        public const int MAXSPEED = 5;
+        public const int MINSPEED = 1;
+        double[] startAngles = new double[12];
+        double[] asteroidSpeeds = new double[12];
+
         Vector2 asteroidMovement;
         Texture2D spacefield;
-        Objet2D asteroid;
+        Asteroid[] asteroids = new Asteroid[12];
         Ship playerShip;
-        //float sunRotation = 0;
+
+        Random r = new Random();
+
 
 
         public Exercice5()
@@ -95,15 +102,25 @@ namespace Exercice5
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             spacefield = Content.Load<Texture2D>("Background\\stars");
-            //sun = new Objet2D(Content.Load<Texture2D>("Background\\sun"), new Vector2(SCREENWIDTH / 2, SCREENHEIGHT / 2));
             Ship.Create(Content.Load<Texture2D>("Sprites\\PlayerShip"), new Vector2(SCREENWIDTH / 4, SCREENHEIGHT / 2));
             playerShip = Ship.GetInstance();
-            asteroid = new Asteroid(Content.Load<Texture2D>("Sprites\\bigAsteroid"), new Vector2(500, 100), AsteroidSize.BIG);
 
-            Random r = new Random();
-            double startAngle = r.NextDouble() * 2 * Math.PI;
-            asteroidMovement.X = (float)Math.Cos(startAngle) * asteroidSpeed;
-            asteroidMovement.Y = (float)Math.Sin(startAngle) * asteroidSpeed;      
+            Random rand = new Random();
+
+            for (int i = 0; i < asteroids.Count(); i++)
+            {
+                double startX = rand.Next(0, SCREENWIDTH);
+                double startY = rand.Next(0, SCREENHEIGHT);
+                asteroids[i] = new Asteroid(Content.Load<Texture2D>("Sprites\\bigAsteroid"), new Vector2((float)startX, (float)startY), AsteroidSize.BIG);
+            }
+
+            for (int i = 0; i < asteroids.Count(); i++)
+            {
+                startAngles[i] = r.NextDouble() * 2 * Math.PI;
+                asteroidSpeeds[i] = r.Next(MINSPEED, MAXSPEED);
+            }
+            
+              
             // TODO: use this.Content to load your game content here
         }
 
@@ -130,10 +147,17 @@ namespace Exercice5
 
             playerShip.RotationAngle += padOneState.ThumbSticks.Right.X / 16.0f;
             playerShip.MoveShip(padOneState.ThumbSticks.Left.Y);
-            asteroid.MoveAsteroid(asteroidMovement.X, asteroidMovement.Y);
+
+            for (int i = 0; i < asteroids.Count(); i++)
+            {
+                asteroidMovement.X = (float)Math.Cos(startAngles[i]) * (float)asteroidSpeeds[i];
+                asteroidMovement.Y = (float)Math.Sin(startAngles[i]) * (float)asteroidSpeeds[i];   
+                asteroids[i].MoveAsteroid(asteroidMovement.X, asteroidMovement.Y);
+            }
+            
 
             //playerShip.CheckCollisionSphere(sun);
-            //sunRotation += (float)(Math.PI / 500);
+
             base.Update(gameTime);
         }
 
@@ -147,8 +171,10 @@ namespace Exercice5
             
             spriteBatch.Begin();
             spriteBatch.Draw(spacefield, Vector2.Zero, Color.White);
-            spriteBatch.Draw(asteroid.Image, asteroid.Position, Color.White);
-            //spriteBatch.Draw(sun.Image, sun.Position, null, Color.White, sunRotation, sun.Offset, 1.0f, SpriteEffects.None, 0f);
+            for (int i = 0; i < asteroids.Count(); i++)
+            {
+                spriteBatch.Draw(asteroids[i].Image, asteroids[i].Position, Color.White);
+            }
 
             if (playerShip.Alive)
             {

@@ -50,38 +50,30 @@ namespace Exercice5
             }
         }
 
-        public void MoveAsteroid(float speed)
+
+        public void MoveAsteroid(float moveX, float moveY)
         {
+            Vector2 tempPos = new Vector2(this.position.X += moveX, this.position.Y += moveY);
+            Vector2 tempCenter = tempPos + offset;
+            sphereCollision.Center.X = tempCenter.X;
+            sphereCollision.Center.Y = tempCenter.Y;
 
-            ////Angle 0 est un vecteur qui pointe vers le haut, et on augmente l'angle dans le sens des aiguilles d'une montre
-            movement.X += (float)(Math.Sin((double)rotationAngle) * speed);
-            movement.Y -= (float)(Math.Cos((double)rotationAngle) * speed);
+            this.position.X = tempPos.X;
+            this.position.Y = tempPos.Y;
+            posCenter = position + offset;
+            boiteCollision.Min.X = position.X;
+            boiteCollision.Min.Y = position.Y;
+            boiteCollision.Max.X = position.X + image.Width;
+            boiteCollision.Max.Y = position.Y + image.Height;
+            sphereCollision.Center.X = posCenter.X;
+            sphereCollision.Center.Y = posCenter.Y;
 
-            ////Dans bien des vieux jeux la vitesse maximum semble être par axe, mais comme on a de la puissance de calcul, on va la faire totale.
-            MaxThrust();
-
-            ////Il faut aussi déplacer les poly de collision
-            MoveAll(movement.X / SLOWFACTOR, movement.Y / SLOWFACTOR);
-
-            ////Déplacement de l'autre côté.  On se donne un buffer de la taille de notre objet
             OtherSide(ref position.X, ref boiteCollision.Min.X, ref boiteCollision.Max.X, ref sphereCollision.Center.X, Exercice5.SCREENWIDTH, image.Width);
             OtherSide(ref position.Y, ref boiteCollision.Min.Y, ref boiteCollision.Max.Y, ref sphereCollision.Center.Y, Exercice5.SCREENHEIGHT, image.Height);
-        }
-
-        private void MoveAll(float moveX, float moveY)
-        {
-            this.position.X += moveX;
-            this.position.Y += moveY;
-
-            this.boiteCollision.Min.X += moveX;
-            this.boiteCollision.Min.Y += moveY;
-            this.boiteCollision.Max.X += moveX;
-            this.boiteCollision.Max.Y += moveY;
-
-            this.sphereCollision.Center.X += moveX;
-            this.sphereCollision.Center.Y += moveY;
 
         }
+
+
 
         private void OtherSide(ref float position, ref float minBox, ref float maxBox, ref float sphere, int screenSize, int imageSize)
         {
