@@ -9,11 +9,23 @@ namespace Exercice5
     {
         private int lives;
         private int score;
+        private bool powerShoot = false;
+
+
+
+
         public void Notify(SubjectObserver subject)
         {
             if (subject is Objet2D)
             {
-                //Do something
+                if (subject is Ship)
+                {
+                    analyseShipStatus(subject);
+                }
+                else if (subject is Projectile)
+                {
+                    analyseBonus(subject);
+                }
 
             }
         }
@@ -26,6 +38,16 @@ namespace Exercice5
         public int GetScore()
         {
             return score;
+        }
+
+        public void analyseShipStatus(SubjectObserver subject)
+        {
+
+        }
+
+        public void analyseBonus(SubjectObserver subject)
+        {
+            
         }
     }
 }

@@ -12,11 +12,37 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Exercice5
 {
+    public enum BonusTypes {ScoreUp, Life, PowerShoot, MassiveDestruction, HalfPoints};
     class Bonus : Objet2D
     {
-        public Bonus(Texture2D image, Vector2 position) : base(image, position)
+        private BonusTypes type { get; set; }
+
+        public Bonus(Texture2D image, Vector2 position, int bonusNumber) : base(image, position)
         {
+            switch (bonusNumber)
+            {
+                case 1:
+                    type = BonusTypes.ScoreUp;
+                    break;
+                case 2:
+                    type = BonusTypes.Life;
+                    break;
+                case 3:
+                    type = BonusTypes.PowerShoot;
+                    break;
+                case 4:
+                    type = BonusTypes.MassiveDestruction;
+                    break;
+                case 5:
+                    type = BonusTypes.HalfPoints;
+                    break;
+            }
+              
+
+
 
         }
+
+
     }
 }
