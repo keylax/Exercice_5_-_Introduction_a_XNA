@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice5", "Exercice5\Exercice5\Exercice5.csproj", "{5B33DF05-2EC7-4B22-AB45-3E354FE7CED3}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Exercice5Content", "Exercice5\Exercice5Content\Exercice5Content.contentproj", "{118A13C5-25F1-477E-8E5B-CAF014C13619}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B33DF05-2EC7-4B22-AB45-3E354FE7CED3}.Debug|x86.ActiveCfg = Debug|x86
+		{5B33DF05-2EC7-4B22-AB45-3E354FE7CED3}.Debug|x86.Build.0 = Debug|x86
+		{5B33DF05-2EC7-4B22-AB45-3E354FE7CED3}.Release|x86.ActiveCfg = Release|x86
+		{5B33DF05-2EC7-4B22-AB45-3E354FE7CED3}.Release|x86.Build.0 = Release|x86
+		{118A13C5-25F1-477E-8E5B-CAF014C13619}.Debug|x86.ActiveCfg = Debug|x86
+		{118A13C5-25F1-477E-8E5B-CAF014C13619}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

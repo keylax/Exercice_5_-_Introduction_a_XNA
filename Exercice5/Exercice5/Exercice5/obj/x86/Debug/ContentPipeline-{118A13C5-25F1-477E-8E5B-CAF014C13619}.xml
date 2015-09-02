@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Sprites\PlayerShip.png</Source>
+      <Name>Sprites\PlayerShip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\bin\x86\Debug\Content\Sprites\PlayerShip.xnb</Output>
+      <Time>2015-09-01T14:35:48-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Background\stars.jpg</Source>
+      <Name>Background\stars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\bin\x86\Debug\Content\Background\stars.xnb</Output>
+      <Time>2010-12-08T12:57:52-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\bigAsteroid.png</Source>
+      <Name>Sprites\bigAsteroid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\bin\x86\Debug\Content\Sprites\bigAsteroid.xnb</Output>
+      <Time>2015-09-02T09:21:51.1299403-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\mediumAsteroid.png</Source>
+      <Name>Sprites\mediumAsteroid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\bin\x86\Debug\Content\Sprites\mediumAsteroid.xnb</Output>
+      <Time>2015-09-02T09:21:51.1299403-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\smallAsteroid.png</Source>
+      <Name>Sprites\smallAsteroid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\bin\x86\Debug\Content\Sprites\smallAsteroid.xnb</Output>
+      <Time>2015-09-02T09:21:51.1455673-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{118A13C5-25F1-477E-8E5B-CAF014C13619}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Guillaume\Desktop\Cinquieme session\Prog\Exercice_5_-_Introduction_a_XNA\Exercice5\Exercice5\Exercice5\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-08-31T16:26:58.8358152-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

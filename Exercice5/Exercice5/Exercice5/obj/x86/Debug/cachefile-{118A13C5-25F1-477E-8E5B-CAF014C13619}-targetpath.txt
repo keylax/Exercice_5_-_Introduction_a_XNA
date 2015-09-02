@@ -1,0 +1,5 @@
+Content\Sprites\PlayerShip.xnb
+Content\Background\stars.xnb
+Content\Sprites\bigAsteroid.xnb
+Content\Sprites\mediumAsteroid.xnb
+Content\Sprites\smallAsteroid.xnb
