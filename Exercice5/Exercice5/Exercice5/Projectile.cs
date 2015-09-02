@@ -14,9 +14,15 @@ namespace Exercice5
 {
     class Projectile: Objet2D
     {
+        private Vector2 movement;
+
         public Projectile(Texture2D image, Vector2 position) : base(image, position)
         {
 
+
         }
+
+
+
     }
 }
